@@ -8,12 +8,10 @@ class Solution {
             if(g[i]<=s[j])
             {
                 i++;
-                j++;
+                
                 count++;
             }
-            else
-                while(j<s.length && g[i]>s[j] )
-                    j++;            
+            j++;            
         }
         return count;
     }
