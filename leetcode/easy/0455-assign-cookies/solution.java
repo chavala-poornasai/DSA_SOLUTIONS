@@ -7,8 +7,7 @@ class Solution {
         {
             if(g[i]<=s[j])
             {
-                i++;
-                
+                i++;             
                 count++;
             }
             j++;            
