@@ -47,9 +47,9 @@ You need to output 2.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 92.94%)  
-**Memory:** 51.6 MB (beats 37.06%)  
-**Submitted:** 2026-10-05T14:28:57.361Z  
+**Runtime:** 15 ms (beats 59.33%)  
+**Memory:** 51.4 MB (beats 55.63%)  
+**Submitted:** 2026-10-05T14:30:46.354Z  
 
 ```java
 class Solution {
@@ -62,12 +62,10 @@ class Solution {
             if(g[i]<=s[j])
             {
                 i++;
-                j++;
+                
                 count++;
             }
-            else
-                while(j<s.length && g[i]>s[j] )
-                    j++;            
+            j++;            
         }
         return count;
     }
