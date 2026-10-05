@@ -48,8 +48,8 @@ You need to output 2.
 
 **Language:** Java  
 **Runtime:** 14 ms (beats 92.94%)  
-**Memory:** 51.3 MB (beats 74.29%)  
-**Submitted:** 2026-10-05T14:26:57.359Z  
+**Memory:** 51.6 MB (beats 37.06%)  
+**Submitted:** 2026-10-05T14:28:57.361Z  
 
 ```java
 class Solution {
@@ -66,10 +66,8 @@ class Solution {
                 count++;
             }
             else
-            {
                 while(j<s.length && g[i]>s[j] )
-                    j++;
-            }
+                    j++;            
         }
         return count;
     }
