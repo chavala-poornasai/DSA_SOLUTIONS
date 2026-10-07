@@ -56,21 +56,24 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 9 ms (beats 6.14%)  
-**Memory:** 50.9 MB (beats 5.29%)  
-**Submitted:** 2026-10-07T14:54:06.948Z  
+**Runtime:** 2 ms (beats 96.55%)  
+**Memory:** 48.5 MB (beats 24.96%)  
+**Submitted:** 2026-10-07T16:21:19.818Z  
 
 ```java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        HashMap<Integer,Integer> hm = new HashMap<>();
-        for(int i=0;i<numbers.length;i++)
-        {
-            if(hm.containsKey(target-numbers[i]))
-                return new int[]{hm.get(target-numbers[i])+1,i+1} ;
-            hm.put(numbers[i],i);
-        } 
-        return new int[]{-1,-1};
+    int left=0,right=numbers.length-1;
+    while(left<right)
+    {
+        if(numbers[left]+numbers[right] == target)
+            return new int[]{left+1,right+1};
+        else if(numbers[left]+numbers[right] < target)
+            left++;
+        else
+            right--;
+    }
+    return new  int[]{-1,-1};
     }
 }
 ```
